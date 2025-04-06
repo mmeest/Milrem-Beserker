@@ -10,9 +10,36 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 
 ## Contents
 
+- [Operating instructions](#operating-instructions)
 - [Tools used](#tools-used)
 - [Pre requirements](#pre-requirements)
 - [Setup](#setup)
+
+## Operating instructions
+
+ENGINE OFF
+
+Location of the UGV is marked with static red marker.
+
+If engine is not running and you try to move - application will throw notification
+with name of the button pressed followed by 'Please start the engine before moving.'
+
+ENGINE ON
+
+To switch engine ON/OFF click on the button right down corner 'START ENGINE'/'STOP ENGINE'
+
+Location of the UGV is marked with UGV icon. 
+UGV moves in 8 directions. Movement is controlled by 8 numeric keyboard keys:
+
+<div>
+  <p>
+    <img src="https://github.com/mmeest/Milrem-Beserker/blob/main/src/img/keyboard.jpg">
+  </p>
+</div>
+
+'Find UGV' button will center the marker on the map.
+
+On the top left corner notification area gives info of the current location and engine status.
 
 ## Tools used
 
