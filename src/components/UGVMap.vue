@@ -45,7 +45,7 @@ const centerMap = () => {
 
 // Create marker icons
 const greenIcon = L.icon({
-    iconUrl: '/src/img/mil.png',
+    iconUrl: '/src/img/mil.png',        // Engine On icon from local folder
     iconSize: [41, 30],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
@@ -66,24 +66,49 @@ const currentIcon = computed(() => props.engineOn ? greenIcon : redIcon);
 
 const handleKeyDown = (e: KeyboardEvent) => {
     // Check if the key is an arrow key
-    const isArrowKey = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key);
+    const isArrowKey = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight',
+        'Numpad1', 'Numpad2', 'Numpad3', 'Numpad4', 'Numpad6', 'Numpad7', 'Numpad8', 'Numpad9'
+    ].includes(e.code);
     
     if(!props.engineOn && isArrowKey){
-        toast.warning(`${e.key} : Please start the engine before moving.`, {
+        toast.warning(`${e.code} : Please start the engine before moving.`, {
             theme: "dark",
             toastClassName: "my-style-toast",
-            transition: "bounce"
+            transition: "zoom"    // bounce, slide, zoom, flip
         });
         return;
     }
 
     // Movement
     const [lat, lng] = ugvPosition.value;
-    switch (e.key) {        
-        case 'ArrowUp': ugvPosition.value = [lat + 0.0001, lng]; break;
-        case 'ArrowDown': ugvPosition.value = [lat - 0.0001, lng]; break;
-        case 'ArrowLeft': ugvPosition.value = [lat, lng - 0.0001]; break;
-        case 'ArrowRight': ugvPosition.value = [lat, lng + 0.0001]; break;    
+    const step = 0.0001;            // Value for movement 
+    switch (e.code) {        
+        case 'ArrowUp':
+        case 'Numpad8':                   // Movement direction: ↑ 
+            ugvPosition.value = [lat + step, lng]; 
+            break;
+        case 'ArrowDown':
+        case 'Numpad2':                   // Movement direction: ↓ 
+            ugvPosition.value = [lat - step, lng]; 
+            break;
+        case 'ArrowLeft': 
+        case 'Numpad4':                   // Movement direction: ←
+            ugvPosition.value = [lat, lng - step]; break;
+        case 'ArrowRight': 
+        case 'Numpad6':                   // Movement direction: →
+            ugvPosition.value = [lat, lng + step]; break;  
+        case 'Numpad7':                   // Movement direction: ↖
+            ugvPosition.value = [lat + step, lng - step];
+            break;
+        case 'Numpad9':                   // Movement direction: ↗
+            ugvPosition.value = [lat + step, lng + step];
+            break;
+        case 'Numpad1':                   // Movement direction: ↙
+            ugvPosition.value = [lat - step, lng - step];
+            break;
+        case 'Numpad3':                   // Movement direction: ↘
+            ugvPosition.value = [lat - step, lng + step];
+            break;  
         default:
             break;
     }
@@ -122,7 +147,7 @@ onUnmounted(() => {
 .info-box {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 60px;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 15px;
     border-radius: 5px;
