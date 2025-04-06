@@ -11,6 +11,8 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 ## Contents
 
 - [Tools used](#tools-used)
+- [Pre requirements](#pre-requirements)
+- [Setup](#setup)
 
 ## Tools used
 
@@ -21,9 +23,9 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 Libraries:
 
 * Vue.js 3.5.13        - Frontend framework
-* Leaflet 1.9.4        - Used for map implementation
+* Leaflet 1.9.4        - Used for map implementation ( https://leafletjs.com/examples/quick-start/ )
 * Vue-Leaflet 0.10.1   - Vue and Leaflet integration
-* Vue3-toastify 0.2.8  - Used for creating notifications
+* Vue3-toastify 0.2.8  - Used for creating notifications ( https://www.npmjs.com/package/react-toastify )
 
 Development tools:
 
@@ -49,4 +51,60 @@ Configuration files:
 * tsconfig.json  - TypeScript configuration
 * vite.config.ts - Vite configuration
 * package.json   - Project dependencies and scripts
+
+## Pre requirements
+
+1. Node.js must be installed. 
+To check the version
+
+```
+node -v
+npm -v
+```
+
+2. VSCode or similar IDE
+
+3. VSCode plugins:
+
+   Vue - Official or Volar or Vetur for developing Vue and TypeScript project
+   ESLint for keeping code clean
+   Prettier code formatter
+
+## Setup
+
+Creating new project
+
+```
+npm create vite@latest
+Project name: Milrem-Beserker
+package.json: milrem_beserker
+Framework: Vue
+Language: TypeScript
+```
+
+Go to project folder
+
+```
+cd Milrem-Beserker
+```
+
+Open project in VSCode
+
+```
+code .
+```
+
+Install dependencies
+
+```
+npm install
+```
+
+Running development server
+
+```
+npm run dev
+```
+
+It will open our application in local server at: http://localhost:5173
 
