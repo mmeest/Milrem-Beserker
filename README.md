@@ -1,3 +1,10 @@
+<div>
+  <p align="center">
+    <img src="https://github.com/mmeest/Milrem-Beserker/blob/main/screen.jpg" height="250px">
+  </p>
+</div>
+
+
 # Milrem Beserker
 
 Application with Vue.js 3, TypeScript and HTML/CSS.
