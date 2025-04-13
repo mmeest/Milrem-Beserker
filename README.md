@@ -11,7 +11,7 @@ Application with Vue.js 3, TypeScript and HTML/CSS.
 
 ### Demo Video: https://github.com/mmeest/Milrem-Beserker/blob/main/UGV%20Operational%20Video.mp4
 
-### Github Pages link(operate with numeric keyboard): https://mmeest.github.io/Milrem-Beserker/
+### Github Pages link(TO BE ADDED): https://mmeest.github.io/Milrem-Beserker/
 
 ## Contents
 
