@@ -40,7 +40,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, onUnmounted, computed, nextTick } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue';
 import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { toast } from 'vue3-toastify';
@@ -108,7 +108,7 @@ const centerMap = () => {
 
 // Create marker icons
 const greenIcon = L.icon({
-    iconUrl: '/src/img/mil.png',        // Engine On icon from local folder
+    iconUrl: './src/mil.png',        // Engine On icon from local folder
     iconSize: [41, 30],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
@@ -158,14 +158,12 @@ const addWaypoint = (e: L.LeafletMouseEvent) => {
 };
 
 // Renaming waypoint
-const renameWaypoint = (waypoint: typeof waypoints[0]) => {
+const renameWaypoint = (waypoint: (typeof waypoints.value)[0]) => {
     const newName = prompt('Enter new name for the waypoint:', waypoint.name);
     if (newName) {
         waypoint.name = newName;
         // Värskendame markeri popupi nime
-        waypoint.marker.getPopup().setContent(`
-            <h4>${waypoint.name}</h4>
-            `);
+        waypoint.marker.bindPopup(`<h4>${waypoint.name}</h4>`).openPopup();
             /* <button class="popup-drive">Drive</button>
             <button class="popup-rename">Rename</button>
             <button class="popup-delete">Delete</button> */
@@ -176,7 +174,7 @@ const renameWaypoint = (waypoint: typeof waypoints[0]) => {
     waypoints.value = waypoints.value.filter(w => w.id !== waypoint.id);
 }; */
 
-const deleteWaypoint = (waypoint: typeof waypoints[0]) => {
+const deleteWaypoint = (waypoint: (typeof waypoints.value)[0]) => {
     waypoint.marker.remove();
     waypoints.value = waypoints.value.filter(w => w.id !== waypoint.id);
 };
