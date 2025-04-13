@@ -2,18 +2,71 @@
 
 Application with Vue.js 3, TypeScript and HTML/CSS.
 
-## Vue 3 + TypeScript + Vite
-
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
-
 ## Contents
 
+- [Getting started](#getting-started)
+- [Features and functionality](#features-and-functionality)
 - [Operating instructions](#operating-instructions)
 - [Tools used](#tools-used)
 - [Pre requirements](#pre-requirements)
 - [Setup](#setup)
+
+## Getting started
+
+1. Clone repository:
+
+```
+git clone https://github.com/mmeest/Milrem-Beserker.git
+cd Milrem-Beserker
+```
+
+2. Install dependencies:
+
+```
+npm install
+```
+
+3. Run the application
+   
+```
+npm run dev
+```
+
+## Features and functionality
+
+Uses Leaflet to display digital map
+UGV’s initial position is marked on the map with red marker(engine is turned off by default)
+
+Engine control:
+
+* A button at the top-right corner starts or stops the engine.
+* When engine is off button text ‘START ENGINE’ with green icon. UGV marker is red (no movement)
+* When engine is turned on button text ‘STOP ENGINE’ with red icon. UGV marker is displayed as UGV icon. (can be moved 8 directions)
+* Button design: grey background (80% opacity), 2px black border, white text.
+* UGV movement is disabled if the engine is off.
+* Pressing arrow keys when engine is off triggers a popup warning.
+
+UGV movement (8 directions)
+Use numeric keyboard keys to move UGV:
+
+* 7 - Move upper left
+* 8 - Move up
+* 9 - Move upper right
+* 4 - Move left
+* 6 - Move right
+* 1 - Move down left
+* 2 - Move down
+* 3 - Move down right
+
+Waypoint system:
+Mouse right click creates new waypoint on the map(blue marker)
+To ‘Saved vaypoints’ appears new waypoint with name of new waypoint and 3 buttons: 
+
+* Drive - drives UGV to the waypoint if engine is turned on
+* Rename - renames the waypoint
+* Delete - removes the waypoint
+
+
 
 ## Operating instructions
 
