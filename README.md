@@ -26,12 +26,12 @@ Develop an interface prototype for an Unmanned Ground Vehicle (UGV) system, empl
 
 Key Deliverables:
 
-   1. Vue 3 Project Setup:
+1. Vue 3 Project Setup:
     • Initialize a Vue 3 application incorporating HTML, CSS, and TypeScript
-    2. Map Integration:
+2. Map Integration:
     • Incorporate a digital map from a provider and/or library of your choice (e.g., Google Maps or Leaflet).
     • Display the UGV's location on the map, marking a predefined starting point as its initial location.
-    3. Planning, Engine Control and Driving:
+3. Planning, Engine Control and Driving:
     • Implement a mock-up control mechanism to start the UGV's engine. This should be achieved through a visually distinct button at top
     • right corner, featuring both an icon and text for clarity. The button must have grey background with 80% opacity, black borders with 2px
     • width and white text color.
@@ -55,22 +55,22 @@ following commands in a popup:
 Delete - Deletes waypoint from store/runtime variable
 Rename - Lets you alter the name of waypoint
 Drive - Changes UGV current location to the waypoints location
-    4. Engine Status Notification:
+4. Engine Status Notification:
     • When the UGV's engine is off and arrow keys are pressed, display a popup notification advising the user to start the engine.
 
 Suggestions:
 
-  1. First implement everything that is required by the deliverable, then focus on refactoring, formatting and styling. Keep the UI simple but intuitive.
+1. First implement everything that is required by the deliverable, then focus on refactoring, formatting and styling. Keep the UI simple but intuitive.
 
-     2. Make the implementation as modular as possible without introducing too much boilerplate, ensuring that developers working on this in the future
+2. Make the implementation as modular as possible without introducing too much boilerplate, ensuring that developers working on this in the future
 
 could re-use your components.
     
-  3. Note down what was the most time consuming/difficult part of the assignment for you
+3. Note down what was the most time consuming/difficult part of the assignment for you
 
-     4. Proper documentation on how to set up and use the application
+4. Proper documentation on how to set up and use the application
 
-     5. Comment any use of AI systems
+5. Comment any use of AI systems
 
 Submission:
     • The code-base to be uploaded to Github
