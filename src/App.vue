@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <EngineToggle :engineOn="engineOn" @toggle="toggleEngine" />
-    <UGVMap :engineOn="engineOn" />
+    <UGVMap :engineOn="engineOn" :waypoints="[]" />
   </div>
 </template>
 

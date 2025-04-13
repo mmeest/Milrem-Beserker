@@ -1,6 +1,6 @@
 <template>
     <button class="engine-button" @click="$emit('toggle')">
-        <span>🔋 {{ engineOn ? 'STOP\nENGINE' : 'START\nENGINE' }}</span>
+        <span>{{ engineOn ? '🛑 STOP\nENGINE' : '🔋 START\nENGINE' }}</span>
     </button>
 </template>
 
@@ -11,7 +11,7 @@ defineProps<{ engineOn: boolean }>()
 <style scoped>
 .engine-button {
     position: absolute;
-    bottom: 16px;
+    top: 16px;
     right: 16px;
     background-color: rgba(128, 128, 128, 0.8);
     border: 2px solid black;
