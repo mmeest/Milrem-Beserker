@@ -61,13 +61,16 @@ Drive - Changes UGV current location to the waypoints location
 Suggestions:
 
   1. First implement everything that is required by the deliverable, then focus on refactoring, formatting and styling. Keep the UI simple but intuitive.
-    2. Make the implementation as modular as possible without introducing too much boilerplate, ensuring that developers working on this in the future
+
+     2. Make the implementation as modular as possible without introducing too much boilerplate, ensuring that developers working on this in the future
 
 could re-use your components.
     
   3. Note down what was the most time consuming/difficult part of the assignment for you
-    4. Proper documentation on how to set up and use the application
-    5. Comment any use of AI systems
+
+     4. Proper documentation on how to set up and use the application
+
+     5. Comment any use of AI systems
 
 Submission:
     • The code-base to be uploaded to Github
