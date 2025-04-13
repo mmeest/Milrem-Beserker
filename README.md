@@ -59,10 +59,13 @@ Drive - Changes UGV current location to the waypoints location
     • When the UGV's engine is off and arrow keys are pressed, display a popup notification advising the user to start the engine.
 
 Suggestions:
-    1. First implement everything that is required by the deliverable, then focus on refactoring, formatting and styling. Keep the UI simple but intuitive.
+
+  1. First implement everything that is required by the deliverable, then focus on refactoring, formatting and styling. Keep the UI simple but intuitive.
     2. Make the implementation as modular as possible without introducing too much boilerplate, ensuring that developers working on this in the future
+
 could re-use your components.
-    3. Note down what was the most time consuming/difficult part of the assignment for you
+    
+  3. Note down what was the most time consuming/difficult part of the assignment for you
     4. Proper documentation on how to set up and use the application
     5. Comment any use of AI systems
 
